@@ -3,74 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeevan-Dhye | Swachh Bharat Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <title>Swach and clean</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="header">
+    <header>
         <div class="logo">
-            <img src="./swach/WhatsApp Image 2024-09-09 at 9.05.21 PM.jpeg" alt="Logo">
-            <h3 class="jeevan">जीवन-दृष्टि</h3>
+            <img src="./swach/jeevanLOGO.jpeg" alt="Jeevan-Dhye Logo">
+            <h3>जीवन दृष्टि </h3>
         </div>
-        <div class="navigation">
-            <form action="action">
-                <div>Air Quality</div>
-                <div>Water Quality</div>
-                <div>Stats</div>
-                <div>About us</div>
-            </form>
+        <nav class="naa">
+            <ul>
+                <li><a href="#air-quality">Precise Analysis</a></li>
+                <li><a href="#water-quality">Rankings</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="notification-bell" style="display:flex; font-size:  30px;">
+            <div style="margin-right: 30px;">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </div>
+            <div>
+                <i class="fa-regular fa-bell"></i>
+
+            </div>
+            <!-- <span class="notification-count">0</span> -->
         </div>
-    </div>
-    <hr>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="./swach/swach3.jpg" alt="Image 1">
-        </div>
-        <div class="mySlides fade">
-            <img src="./swach/swach2.jpeg" alt="Image 2">
-        </div>
-    </div>
-        <div class="stats-container">
-            <div class="stat-block" id="stations">
+    </header>
+
+    <main>
+        <section class="banner">
+            <img src="./swach/hero.jpg" alt="Swachh Bharat Abhiyan">
+        </section>
+
+        <section class="stats">
+            <div class="stat-card" id="post-office-count">
                 <h2>1,55,000</h2>
-                <p>Total Post office</p>
+                <p>Total Post Offices</p>
             </div>
-            <div class="stat-block" id="states">
+            <div class="stat-card" id="postal-zone-count">
                 <h2>9</h2>
-                <p>Postal Zone</p>
+                <p>Postal Zones</p>
             </div>
-            <div class="stat-block" id="aqi">
+            <div class="stat-card" id="top-post-offices">
                 <h2>100</h2>
-                <p>Top Post office</p>
+                <p>Top Post Offices</p>
             </div>
-        </div>
-        <div class="image-grid">
-            <div class="image-block" id="air-quality">
-                <img src="air-quality.jpg" alt="Air Quality Index">
-                <div class="image-overlay">
-                    <h3>Air Quality Index</h3>
+        </section>
+        <section class="info-sections">
+            <div class="info-card" id="air-quality">
+                <div class="info-text">
+                    <h3>Live Surveillance</h3>
                 </div>
+                <div class="info-image"></div>
             </div>
-            <div class="image-block" id="water-quality">
-                <img src="water-quality.jpg" alt="Water Quality Index">
-                <div class="image-overlay">
-                    <h3>Water Quality Index</h3>
+            <div class="info-card" id="water-quality">
+                <div class="info-text">
+                    <!-- <h3>Complai</h3> -->
                 </div>
+                <div class="info-image"></div>
             </div>
-            <div class="image-block" id="analysis">
-                <img src="analysis.jpg" alt="Analysis">
-                <div class="image-overlay">
-                    <h3>Analysis</h3>
+            <div class="info-card" id="analysis">
+                <div class="info-text">
+                    <!-- <h3>Analysis</h3> -->
                 </div>
+                <div class="info-image"></div>
             </div>
-            <div class="image-block" id="about-us">
-                <img src="about-us.jpg" alt="About Us">
-                <div class="image-overlay">
-                    <h3>About Us</h3>
+            <div class="info-card" id="about">
+                <div class="info-text">
+                    <!-- <h3>About Us</h3> -->
                 </div>
+                <div class="info-image"></div>
             </div>
-        </div>
-        <script src="i.js"></script>
-    </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jeevan-Drishti. All rights reserved.</p>
+    </footer>
 </body>
-</html> 
+</html>

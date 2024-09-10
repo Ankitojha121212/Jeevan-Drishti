@@ -1,189 +1,222 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.image-grid {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    background-color: #fff;
-}
-
-.image-block {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.image-block img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.image-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-.image-block h3 {
-    margin: 0;
-}
-
-@media (max-width: 768px) {
-    .image-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    .image-block {
-        width: 90%;
-    }
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-.jeevan{
-    color: rgba(0, 0, 0, 0.728);
-    margin-left:15px;
-}
-.header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: white;
-    color: white;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
 }
 
-.stats-container {
+header {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+.logo{
+    display: flex;
+}
+.logo h3{
+    display: flex;
+    /* margin-top: 20px; */
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.banner {
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden; /* Ensures any overflow is hidden */
+    height: 300px; /* Set a fixed height */
+}
+
+.banner img {
+    width: 100%; /* Ensures image takes the full width of the container */
+    height: 100%; /* Ensures image takes the full height of the container */
+    object-fit: cover; /* Keeps the aspect ratio and ensures image covers the entire container */
+    position: absolute; /* Allows better control for centering */
+    top: 0; /* Aligns the image to the top */
+    left: 0; /* Aligns the image to the left */
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.stats {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     padding: 20px;
-    background-color: white;
 }
+.banner img{
+    width: 100%;
+    position: relative;
+    height: 20rem;
+    object-fit: cover;
 
-.stat-block {
+
+}
+.stat-card {
+    background-color: #ffc107;
+    color: white;
+    border-radius: 8px;
     text-align: center;
     padding: 20px;
-    border-radius: 8px;
-    width: 150px;
-    color: white;
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
 }
-
-.stat-block h2 {
-    font-size: 36px;
-    margin: 0;
-}
-
-.stat-block p {
-    font-size: 16px;
-    margin: 0;
-    margin-top: 10px;
-}
-
-#stations {
-    background-color: #f4b400;
-}
-
-#cities {
-    background-color: #d67ee2;
-}
-
-#states {
-    background-color: #3b82f6;
-}
-
-#aqi {
-    background-color: #34d399;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .stats-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .stat-block {
-        margin-bottom: 10px;
-        width: 100%;
-    }
-}
-
-.logo{
-    height: 10%;
-    width: 10%;
+.naa ul {
+    list-style: none;
     display: flex;
+    justify-content: space-around; /* Evenly space the items */
+    margin: 0; /* Ensure no extra margin around the ul */
+    padding: 0; /* Ensure no extra padding around the ul */
 }
-.logo img{
-    height: 10%;
-    width: 40%;
+
+.naa ul li {
+    margin-left: 30px; /* Add space between each list item */
 }
-.navigation div {
-    display: inline-block;
-    margin-right: 20px;
-    padding: 20px 10px 0px 0px;;
-    align-items: center;
-    cursor: pointer;
-    color: black;
+
+.naa ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem; /* Increase font size */
+    transition: color 0.3s ease;
 }
-/* Slideshow container */
-.slideshow-container {
+
+.naa ul li a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+}
+
+.stat-card h2 {
+    font-size: 2.5rem;
+}
+
+.info-sections {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.info-card {
+    background-color: white;
+    width: 22%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+}
+
+.info-card h3 {
+    text-align: center;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.notification-bell {
     position: relative;
-    max-width: 100%;
-    height: 400px;
-    margin: auto;
-    overflow: hidden;
+    margin-right: 20px;
+    cursor: pointer;
 }
-/* Slides */
-.mySlides {
-    display: none;
-    width: 100%;
-    height: 400px;
+
+.bell-icon {
+    width: 25px;
+    height: 25px;
+    background-image: url('bell-icon.png'); /* You can add your bell image here */
+    background-size: cover;
 }
-.mySlides img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+
+
+
+.info-card:hover {
+    transform: scale(1.05);
+    background-color: #6c757d; /* A greyish color on hover for all */
 }
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+.info-sections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
 }
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+
+.info-card {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+
+/* Add specific background images to each card */
+#air-quality {
+    background-image: url('./swach/survillance.webp');
+}
+
+#water-quality {
+    background-image: url('./swach/complaint.webp');
+}
+
+#analysis {
+    background-image: url('./swach/analysis.webp');
+}
+
+#about {
+    background-image: url('./swach/about\ us.jpg');
 }
