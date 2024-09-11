@@ -8,3 +8,5 @@ document.querySelector('.notification-bell').addEventListener('click', () => {
     notificationCount.textContent = currentCount;
     document.querySelector('.notification-bell').classList.add('has-new');
 });
+// hiii
+// hlo
